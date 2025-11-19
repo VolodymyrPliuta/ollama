@@ -1,10 +1,20 @@
 from ollama import chat
 
-response = chat(
-    model='phi',
-    messages=[
-        {'role': 'user', 'content': 'Why is the sky blue?'}
-    ]
-)
+model = "phi"
 
-print(response.message.content)
+print("Jus a chat. Type 'exit' to quit.\n")
+
+while True:
+    user_input = input("Me: ")
+
+    if user_input.lower() in ["exit", "quit"]:
+        break
+
+    response = chat(
+        model=model,
+        messages=[
+            {"role": "user", "content": user_input}
+        ]
+    )
+
+    print("AI:", response.message.content, "\n")
