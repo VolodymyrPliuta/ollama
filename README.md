@@ -38,7 +38,7 @@ ollama list
 
 2. Navigate to the project directory:
    ```
-   cd Ollama
+   cd ollama
    ``` 
 3. Create and activate a virtual environment:
    ```bash
